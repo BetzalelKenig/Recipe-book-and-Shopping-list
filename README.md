@@ -1,4 +1,4 @@
-# Recipe-book-and-Shopping-list
+# [Recipe-book-and-Shopping-list](https://betzalelkenig.github.io/Recipe-book-and-Shopping-list/)
 
 [Check the app](https://betzalelkenig.github.io/Recipe-book-and-Shopping-list/)
 
