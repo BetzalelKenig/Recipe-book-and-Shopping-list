@@ -1,4 +1,6 @@
-# Recipes
+# Recipe-book-and-Shopping-list
+
+[Check the app](https://betzalelkenig.github.io/Recipe-book-and-Shopping-list/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
