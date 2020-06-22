@@ -4,11 +4,11 @@ import { ShoppingListService } from '../shopping-list.service';
 
 
 @Component({
-  selector: 'app-shoping-list',
+  selector: 'app-shopping-list',
   templateUrl: './shoping-list.component.html',
   styleUrls: ['./shoping-list.component.css']
 })
-export class ShopingListComponent implements OnInit {
+export class ShoppingListComponent implements OnInit {
   ingredients: Ingredient[];
 
   constructor(private slService: ShoppingListService) { }
@@ -20,6 +20,6 @@ export class ShopingListComponent implements OnInit {
         (ingredients: Ingredient[]) => {
           this.ingredients = ingredients;
         }
-      )
+      );
   }
 }
