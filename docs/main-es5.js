@@ -10,11 +10,11 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
   /***/
@@ -45,6 +45,129 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     module.exports = webpackEmptyAsyncContext;
     webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
     /***/
+  },
+
+  /***/
+  "./src/app/app-routing.module.ts":
+  /*!***************************************!*\
+    !*** ./src/app/app-routing.module.ts ***!
+    \***************************************/
+
+  /*! exports provided: AppRoutingModule */
+
+  /***/
+  function srcAppAppRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function () {
+      return AppRoutingModule;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./recipes/recipes.component */
+    "./src/app/recipes/recipes.component.ts");
+    /* harmony import */
+
+
+    var _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./shoping-list/shoping-list.component */
+    "./src/app/shoping-list/shoping-list.component.ts");
+    /* harmony import */
+
+
+    var _recipes_recipe_start_recipe_start_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./recipes/recipe-start/recipe-start.component */
+    "./src/app/recipes/recipe-start/recipe-start.component.ts");
+    /* harmony import */
+
+
+    var _recipes_recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./recipes/recipe-detail/recipe-detail.component */
+    "./src/app/recipes/recipe-detail/recipe-detail.component.ts");
+    /* harmony import */
+
+
+    var _recipes_recipe_edit_recipe_edit_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./recipes/recipe-edit/recipe-edit.component */
+    "./src/app/recipes/recipe-edit/recipe-edit.component.ts");
+
+    var appRoutes = [{
+      path: '',
+      redirectTo: '/recipes',
+      pathMatch: 'full'
+    }, {
+      path: 'recipes',
+      component: _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_2__["RecipesComponent"],
+      children: [{
+        path: '',
+        component: _recipes_recipe_start_recipe_start_component__WEBPACK_IMPORTED_MODULE_4__["RecipeStartComponent"]
+      }, {
+        path: 'new',
+        component: _recipes_recipe_edit_recipe_edit_component__WEBPACK_IMPORTED_MODULE_6__["RecipeEditComponent"]
+      }, {
+        path: ':id',
+        component: _recipes_recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_5__["RecipeDetailComponent"]
+      }, {
+        path: ':id/edit',
+        component: _recipes_recipe_edit_recipe_edit_component__WEBPACK_IMPORTED_MODULE_6__["RecipeEditComponent"]
+      }]
+    }, {
+      path: 'shopping-list',
+      component: _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_3__["ShoppingListComponent"]
+    }];
+
+    var AppRoutingModule = function AppRoutingModule() {
+      _classCallCheck(this, AppRoutingModule);
+    };
+
+    AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: AppRoutingModule
+    });
+    AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function AppRoutingModule_Factory(t) {
+        return new (t || AppRoutingModule)();
+      },
+      imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(appRoutes)], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+    });
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppRoutingModule, {
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppRoutingModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(appRoutes)],
+          exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        }]
+      }], null, null);
+    })();
+    /***/
+
   },
 
   /***/
@@ -81,51 +204,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-    /* harmony import */
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
-
-    var _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./recipes/recipes.component */
-    "./src/app/recipes/recipes.component.ts");
-    /* harmony import */
-
-
-    var _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./shoping-list/shoping-list.component */
-    "./src/app/shoping-list/shoping-list.component.ts");
-
-    function AppComponent_app_recipes_4_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-recipes");
-      }
-    }
-
-    function AppComponent_app_shoping_list_5_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-shoping-list");
-      }
-    }
-
-    var AppComponent = /*#__PURE__*/function () {
-      function AppComponent() {
-        _classCallCheck(this, AppComponent);
-
-        this.title = 'recipes';
-        this.loadedFeature = 'recipe';
-      }
-
-      _createClass(AppComponent, [{
-        key: "onNavigate",
-        value: function onNavigate(feature) {
-          this.loadedFeature = feature;
-        }
-      }]);
-
-      return AppComponent;
-    }();
+    var AppComponent = function AppComponent() {
+      _classCallCheck(this, AppComponent);
+    };
 
     AppComponent.ɵfac = function AppComponent_Factory(t) {
       return new (t || AppComponent)();
@@ -134,47 +219,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: AppComponent,
       selectors: [["app-root"]],
-      decls: 6,
-      vars: 2,
-      consts: [[3, "featureSelected"], [1, "container"], [1, "row"], [1, "cal-md-12"], [4, "ngIf"]],
+      decls: 5,
+      vars: 0,
+      consts: [[1, "container"], [1, "row"], [1, "cal-md-12"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-header", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-header");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("featureSelected", function AppComponent_Template_app_header_featureSelected_0_listener($event) {
-            return ctx.onNavigate($event);
-          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, AppComponent_app_recipes_4_Template, 1, 0, "app-recipes", 4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, AppComponent_app_shoping_list_5_Template, 1, 0, "app-shoping-list", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "router-outlet");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.loadedFeature === "recipe");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.loadedFeature !== "recipe");
         }
       },
-      directives: [_header_header_component__WEBPACK_IMPORTED_MODULE_1__["HeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_3__["RecipesComponent"], _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_4__["ShopingListComponent"]],
+      directives: [_header_header_component__WEBPACK_IMPORTED_MODULE_1__["HeaderComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]],
       styles: ["button[_ngcontent-%COMP%]{\r\n    margin: 5px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0FBQ2YiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJ1dHRvbntcclxuICAgIG1hcmdpbjogNXB4O1xyXG59Il19 */"]
     });
     /*@__PURE__*/
@@ -284,6 +351,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./shared/dropdown.directive */
     "./src/app/shared/dropdown.directive.ts");
+    /* harmony import */
+
+
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./app-routing.module */
+    "./src/app/app-routing.module.ts");
+    /* harmony import */
+
+
+    var _recipes_recipe_start_recipe_start_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! ./recipes/recipe-start/recipe-start.component */
+    "./src/app/recipes/recipe-start/recipe-start.component.ts");
+    /* harmony import */
+
+
+    var _recipes_recipe_edit_recipe_edit_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! ./recipes/recipe-edit/recipe-edit.component */
+    "./src/app/recipes/recipe-edit/recipe-edit.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -298,13 +383,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         return new (t || AppModule)();
       },
       providers: [],
-      imports: [[_angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]]]
+      imports: [[_angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"]]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_3__["HeaderComponent"], _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_4__["RecipesComponent"], _recipes_recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_5__["RecipeListComponent"], _recipes_recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_6__["RecipeDetailComponent"], _recipes_recipe_list_recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_7__["RecipeItemComponent"], _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_8__["ShopingListComponent"], _shoping_list_shopping_edit_shopping_edit_component__WEBPACK_IMPORTED_MODULE_9__["ShoppingEditComponent"], _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_11__["DropdownDirective"]],
-        imports: [_angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]]
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_3__["HeaderComponent"], _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_4__["RecipesComponent"], _recipes_recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_5__["RecipeListComponent"], _recipes_recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_6__["RecipeDetailComponent"], _recipes_recipe_list_recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_7__["RecipeItemComponent"], _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_8__["ShoppingListComponent"], _shoping_list_shopping_edit_shopping_edit_component__WEBPACK_IMPORTED_MODULE_9__["ShoppingEditComponent"], _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_11__["DropdownDirective"], _recipes_recipe_start_recipe_start_component__WEBPACK_IMPORTED_MODULE_13__["RecipeStartComponent"], _recipes_recipe_edit_recipe_edit_component__WEBPACK_IMPORTED_MODULE_14__["RecipeEditComponent"]],
+        imports: [_angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"]]
       });
     })();
     /*@__PURE__*/
@@ -314,8 +399,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_3__["HeaderComponent"], _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_4__["RecipesComponent"], _recipes_recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_5__["RecipeListComponent"], _recipes_recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_6__["RecipeDetailComponent"], _recipes_recipe_list_recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_7__["RecipeItemComponent"], _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_8__["ShopingListComponent"], _shoping_list_shopping_edit_shopping_edit_component__WEBPACK_IMPORTED_MODULE_9__["ShoppingEditComponent"], _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_11__["DropdownDirective"]],
-          imports: [_angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_3__["HeaderComponent"], _recipes_recipes_component__WEBPACK_IMPORTED_MODULE_4__["RecipesComponent"], _recipes_recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_5__["RecipeListComponent"], _recipes_recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_6__["RecipeDetailComponent"], _recipes_recipe_list_recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_7__["RecipeItemComponent"], _shoping_list_shoping_list_component__WEBPACK_IMPORTED_MODULE_8__["ShoppingListComponent"], _shoping_list_shopping_edit_shopping_edit_component__WEBPACK_IMPORTED_MODULE_9__["ShoppingEditComponent"], _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_11__["DropdownDirective"], _recipes_recipe_start_recipe_start_component__WEBPACK_IMPORTED_MODULE_13__["RecipeStartComponent"], _recipes_recipe_edit_recipe_edit_component__WEBPACK_IMPORTED_MODULE_14__["RecipeEditComponent"]],
+          imports: [_angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"]],
           providers: [],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
         }]
@@ -353,26 +438,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../shared/dropdown.directive */
     "./src/app/shared/dropdown.directive.ts");
 
-    var HeaderComponent = /*#__PURE__*/function () {
-      function HeaderComponent() {
-        _classCallCheck(this, HeaderComponent);
-
-        this.featureSelected = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-      }
-
-      _createClass(HeaderComponent, [{
-        key: "onSelect",
-        value: function onSelect(feature) {
-          this.featureSelected.emit(feature);
-        }
-      }]);
-
-      return HeaderComponent;
-    }();
+    var HeaderComponent = function HeaderComponent() {
+      _classCallCheck(this, HeaderComponent);
+    };
 
     HeaderComponent.ɵfac = function HeaderComponent_Factory(t) {
       return new (t || HeaderComponent)();
@@ -381,12 +459,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     HeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: HeaderComponent,
       selectors: [["app-header"]],
-      outputs: {
-        featureSelected: "featureSelected"
-      },
       decls: 25,
       vars: 0,
-      consts: [[1, "navbar", "navbar-default"], [1, "container-fluid"], [1, "navbar-header"], ["href", "#", 1, "navbar-brand"], [1, "navbar-default"], [1, "nav", "navbar-nav"], ["href", "#", 3, "click"], [1, "nav", "navbar-nav", "navbar-right"], ["appDropdown", "", 1, "dropdown"], ["href", "#", "role", "button", 1, "dropdown-toggle"], [1, "caret"], [1, "dropdown-menu"], ["href", "#"]],
+      consts: [[1, "navbar", "navbar-default"], [1, "container-fluid"], [1, "navbar-header"], ["href", "#", 1, "navbar-brand"], [1, "navbar-default"], [1, "nav", "navbar-nav"], ["routerLinkActive", "active"], ["routerLink", "/recipes"], ["routerLink", "/shopping-list"], [1, "nav", "navbar-nav", "navbar-right"], ["appDropdown", "", 1, "dropdown"], ["role", "button", 1, "dropdown-toggle", 2, "cursor", "pointer"], [1, "caret"], [1, "dropdown-menu"], [2, "cursor", "pointer"]],
       template: function HeaderComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
@@ -407,13 +482,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "ul", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "li");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "li", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HeaderComponent_Template_a_click_8_listener() {
-            return ctx.onSelect("recipe");
-          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 7);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Recipes");
 
@@ -421,13 +492,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "li");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "li", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "a", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HeaderComponent_Template_a_click_11_listener() {
-            return ctx.onSelect("shopping-list");
-          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "a", 8);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Shopping List");
 
@@ -437,23 +504,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "ul", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "ul", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li", 10);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 11);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Manage ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "span", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "span", 12);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "ul", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "ul", 13);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Save Data");
 
@@ -463,7 +530,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "li");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Fetch Data");
 
@@ -484,7 +551,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       },
-      directives: [_shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_1__["DropdownDirective"]],
+      directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_2__["DropdownDirective"]],
       encapsulation: 2
     });
     /*@__PURE__*/
@@ -496,11 +563,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           selector: 'app-header',
           templateUrl: './header.component.html'
         }]
-      }], null, {
-        featureSelected: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
-        }]
-      });
+      }], null, null);
     })();
     /***/
 
@@ -534,19 +597,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _recipes_recipe_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _recipes_recipe_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./recipes/recipe.model */
     "./src/app/recipes/recipe.model.ts");
     /* harmony import */
 
 
-    var _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ./shared/ingredient.model */
     "./src/app/shared/ingredient.model.ts");
     /* harmony import */
 
 
-    var _shopping_list_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _shopping_list_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./shopping-list.service */
     "./src/app/shopping-list.service.ts");
 
@@ -555,14 +624,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, RecipeService);
 
         this.slService = slService;
-        this.recipeSelected = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.recipes = [new _recipes_recipe_model__WEBPACK_IMPORTED_MODULE_1__["Recipe"]('A Test Recipe', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__["Ingredient"]('Potato', 3), new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__["Ingredient"]('selery', 1)]), new _recipes_recipe_model__WEBPACK_IMPORTED_MODULE_1__["Recipe"]('A Test Recipe 2', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__["Ingredient"]('Coren', 2), new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__["Ingredient"]('Chiken', 10)])];
+        this.recipeSelected = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.recipes = [new _recipes_recipe_model__WEBPACK_IMPORTED_MODULE_2__["Recipe"]('A Test Recipe', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_3__["Ingredient"]('Potato', 3), new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_3__["Ingredient"]('selery', 1)]), new _recipes_recipe_model__WEBPACK_IMPORTED_MODULE_2__["Recipe"]('A Test Recipe 2', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_3__["Ingredient"]('Coren', 2), new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_3__["Ingredient"]('Chiken', 10)])];
       }
 
       _createClass(RecipeService, [{
         key: "getRecipes",
         value: function getRecipes() {
           return this.recipes.slice();
+        }
+      }, {
+        key: "getRecipe",
+        value: function getRecipe(id) {
+          return this.recipes[id];
         }
       }, {
         key: "addIngredientsToShoppingList",
@@ -575,7 +649,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }();
 
     RecipeService.ɵfac = function RecipeService_Factory(t) {
-      return new (t || RecipeService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_shopping_list_service__WEBPACK_IMPORTED_MODULE_3__["ShoppingListService"]));
+      return new (t || RecipeService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_shopping_list_service__WEBPACK_IMPORTED_MODULE_4__["ShoppingListService"]));
     };
 
     RecipeService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
@@ -593,7 +667,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }]
       }], function () {
         return [{
-          type: _shopping_list_service__WEBPACK_IMPORTED_MODULE_3__["ShoppingListService"]
+          type: _shopping_list_service__WEBPACK_IMPORTED_MODULE_4__["ShoppingListService"]
         }];
       }, null);
     })();
@@ -635,13 +709,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../shared/dropdown.directive */
     "./src/app/shared/dropdown.directive.ts");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
@@ -664,19 +744,35 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     var RecipeDetailComponent = /*#__PURE__*/function () {
-      function RecipeDetailComponent(recipeService) {
+      function RecipeDetailComponent(recipeService, route, router) {
         _classCallCheck(this, RecipeDetailComponent);
 
         this.recipeService = recipeService;
+        this.route = route;
+        this.router = router;
       }
 
       _createClass(RecipeDetailComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this = this;
+
+          this.route.params.subscribe(function (params) {
+            _this.id = +params['id'];
+            _this.recipe = _this.recipeService.getRecipe(_this.id);
+          });
+        }
       }, {
         key: "onAddToShoppingList",
         value: function onAddToShoppingList() {
           this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+        }
+      }, {
+        key: "onEditRecipe",
+        value: function onEditRecipe() {
+          this.router.navigate(['edit'], {
+            relativeTo: this.route
+          });
         }
       }]);
 
@@ -684,18 +780,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }();
 
     RecipeDetailComponent.ɵfac = function RecipeDetailComponent_Factory(t) {
-      return new (t || RecipeDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]));
+      return new (t || RecipeDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]));
     };
 
     RecipeDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: RecipeDetailComponent,
       selectors: [["app-recipe-detail"]],
-      inputs: {
-        recipe: "recipe"
-      },
       decls: 30,
       vars: 5,
-      consts: [[1, "row"], [1, "col-xs-12"], [1, "img-responsive", 2, "max-height", "300px", 3, "src", "alt"], ["appDropdown", "", 1, "btn-group"], ["type", "button", 1, "btn", "btn-primary", "dropdown-toggle"], [1, "caret"], [1, "dropdown-menu"], [2, "cursor", "pointer", 3, "click"], ["href", "#"], [1, "list-group"], ["class", "list-group-item", 4, "ngFor", "ngForOf"], [1, "list-group-item"]],
+      consts: [[1, "row"], [1, "col-xs-12"], [1, "img-responsive", 2, "max-height", "300px", 3, "src", "alt"], ["appDropdown", "", 1, "btn-group"], ["type", "button", 1, "btn", "btn-primary", "dropdown-toggle"], [1, "caret"], [1, "dropdown-menu"], [2, "cursor", "pointer", 3, "click"], [2, "cursor", "pointer"], [1, "list-group"], ["class", "list-group-item", 4, "ngFor", "ngForOf"], [1, "list-group-item"]],
       template: function RecipeDetailComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -754,7 +847,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "li");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function RecipeDetailComponent_Template_a_click_18_listener() {
+            return ctx.onEditRecipe();
+          });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Edit Recipe");
 
@@ -825,7 +922,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.recipe.ingredients);
         }
       },
-      directives: [_shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_2__["DropdownDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]],
+      directives: [_shared_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__["DropdownDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY2lwZXMvcmVjaXBlLWRldGFpbC9yZWNpcGUtZGV0YWlsLmNvbXBvbmVudC5jc3MifQ== */"]
     });
     /*@__PURE__*/
@@ -841,12 +938,107 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }], function () {
         return [{
           type: src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
         }];
-      }, {
-        recipe: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/recipes/recipe-edit/recipe-edit.component.ts":
+  /*!**************************************************************!*\
+    !*** ./src/app/recipes/recipe-edit/recipe-edit.component.ts ***!
+    \**************************************************************/
+
+  /*! exports provided: RecipeEditComponent */
+
+  /***/
+  function srcAppRecipesRecipeEditRecipeEditComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RecipeEditComponent", function () {
+      return RecipeEditComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var RecipeEditComponent = /*#__PURE__*/function () {
+      function RecipeEditComponent(route) {
+        _classCallCheck(this, RecipeEditComponent);
+
+        this.route = route;
+        this.editMode = false;
+      }
+
+      _createClass(RecipeEditComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this2 = this;
+
+          this.route.params.subscribe(function (params) {
+            _this2.id = +params['id'];
+            _this2.editMode = params['id'] != null;
+          });
+        }
+      }]);
+
+      return RecipeEditComponent;
+    }();
+
+    RecipeEditComponent.ɵfac = function RecipeEditComponent_Factory(t) {
+      return new (t || RecipeEditComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]));
+    };
+
+    RecipeEditComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: RecipeEditComponent,
+      selectors: [["app-recipe-edit"]],
+      decls: 2,
+      vars: 0,
+      template: function RecipeEditComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "recipe-edit works!");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY2lwZXMvcmVjaXBlLWVkaXQvcmVjaXBlLWVkaXQuY29tcG9uZW50LmNzcyJ9 */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RecipeEditComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-recipe-edit',
+          templateUrl: './recipe-edit.component.html',
+          styleUrls: ['./recipe-edit.component.css']
         }]
-      });
+      }], function () {
+        return [{
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]
+        }];
+      }, null);
     })();
     /***/
 
@@ -880,50 +1072,44 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! src/app/recipe.service */
-    "./src/app/recipe.service.ts");
+    var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var _c0 = function _c0(a0) {
+      return [a0];
+    };
 
     var RecipeItemComponent = /*#__PURE__*/function () {
-      function RecipeItemComponent(recipeService) {
+      function RecipeItemComponent() {
         _classCallCheck(this, RecipeItemComponent);
-
-        this.recipeService = recipeService;
       }
 
       _createClass(RecipeItemComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
-      }, {
-        key: "onSelected",
-        value: function onSelected() {
-          this.recipeService.recipeSelected.emit(this.recipe);
-        }
       }]);
 
       return RecipeItemComponent;
     }();
 
     RecipeItemComponent.ɵfac = function RecipeItemComponent_Factory(t) {
-      return new (t || RecipeItemComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]));
+      return new (t || RecipeItemComponent)();
     };
 
     RecipeItemComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: RecipeItemComponent,
       selectors: [["app-recipe-item"]],
       inputs: {
-        recipe: "recipe"
+        recipe: "recipe",
+        index: "index"
       },
       decls: 8,
-      vars: 4,
-      consts: [["href", "#", 1, "list-group-item", "clearfix", 3, "click"], [1, "pull-left"], [1, "list-group-item-heading"], [1, "list-group-item-text"], [1, "pull-right"], [1, "img-responsive", 2, "max-height", "50px", 3, "src", "alt"]],
+      vars: 7,
+      consts: [["routerLinkActive", "active", 1, "list-group-item", "clearfix", 2, "cursor", "pointer", 3, "routerLink"], [1, "pull-left"], [1, "list-group-item-heading"], [1, "list-group-item-text"], [1, "pull-right"], [1, "img-responsive", 2, "max-height", "50px", 3, "src", "alt"]],
       template: function RecipeItemComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 0);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function RecipeItemComponent_Template_a_click_0_listener() {
-            return ctx.onSelected();
-          });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
 
@@ -951,6 +1137,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
 
         if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](5, _c0, ctx.index));
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.recipe.name);
@@ -966,6 +1154,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx.recipe.imagePath, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
         }
       },
+      directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY2lwZXMvcmVjaXBlLWxpc3QvcmVjaXBlLWl0ZW0vcmVjaXBlLWl0ZW0uY29tcG9uZW50LmNzcyJ9 */"]
     });
     /*@__PURE__*/
@@ -978,12 +1167,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           templateUrl: './recipe-item.component.html',
           styleUrls: ['./recipe-item.component.css']
         }]
-      }], function () {
-        return [{
-          type: src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]
-        }];
-      }, {
+      }], null, {
         recipe: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        index: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }]
       });
@@ -1026,13 +1214,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./recipe-item/recipe-item.component */
     "./src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts");
 
@@ -1043,16 +1237,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       if (rf & 2) {
         var recipeEl_r1 = ctx.$implicit;
+        var i_r2 = ctx.index;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("recipe", recipeEl_r1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("recipe", recipeEl_r1)("index", i_r2);
       }
     }
 
     var RecipeListComponent = /*#__PURE__*/function () {
-      function RecipeListComponent(recipeServices) {
+      function RecipeListComponent(recipeServices, router, route) {
         _classCallCheck(this, RecipeListComponent);
 
         this.recipeServices = recipeServices;
+        this.router = router;
+        this.route = route;
       }
 
       _createClass(RecipeListComponent, [{
@@ -1060,13 +1257,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           this.recipes = this.recipeServices.getRecipes();
         }
+      }, {
+        key: "onNewRecipe",
+        value: function onNewRecipe() {
+          this.router.navigate(['new'], {
+            relativeTo: this.route
+          });
+        }
       }]);
 
       return RecipeListComponent;
     }();
 
     RecipeListComponent.ɵfac = function RecipeListComponent_Factory(t) {
-      return new (t || RecipeListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]));
+      return new (t || RecipeListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]));
     };
 
     RecipeListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1074,7 +1278,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       selectors: [["app-recipe-list"]],
       decls: 8,
       vars: 1,
-      consts: [[1, "row"], [1, "col-ax-12"], [1, "btn", "btn-success"], [1, "col-xs-12"], [3, "recipe", 4, "ngFor", "ngForOf"], [3, "recipe"]],
+      consts: [[1, "row"], [1, "col-ax-12"], [1, "btn", "btn-success", 3, "click"], [1, "col-xs-12"], [3, "recipe", "index", 4, "ngFor", "ngForOf"], [3, "recipe", "index"]],
       template: function RecipeListComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -1082,6 +1286,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function RecipeListComponent_Template_button_click_2_listener() {
+            return ctx.onNewRecipe();
+          });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "New Recipe");
 
@@ -1097,7 +1305,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, RecipeListComponent_app_recipe_item_7_Template, 1, 1, "app-recipe-item", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, RecipeListComponent_app_recipe_item_7_Template, 1, 2, "app-recipe-item", 4);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1110,7 +1318,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.recipes);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_3__["RecipeItemComponent"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _recipe_item_recipe_item_component__WEBPACK_IMPORTED_MODULE_4__["RecipeItemComponent"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY2lwZXMvcmVjaXBlLWxpc3QvcmVjaXBlLWxpc3QuY29tcG9uZW50LmNzcyJ9 */"]
     });
     /*@__PURE__*/
@@ -1126,7 +1334,88 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }], function () {
         return [{
           type: src_app_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
         }];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/recipes/recipe-start/recipe-start.component.ts":
+  /*!****************************************************************!*\
+    !*** ./src/app/recipes/recipe-start/recipe-start.component.ts ***!
+    \****************************************************************/
+
+  /*! exports provided: RecipeStartComponent */
+
+  /***/
+  function srcAppRecipesRecipeStartRecipeStartComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RecipeStartComponent", function () {
+      return RecipeStartComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var RecipeStartComponent = /*#__PURE__*/function () {
+      function RecipeStartComponent() {
+        _classCallCheck(this, RecipeStartComponent);
+      }
+
+      _createClass(RecipeStartComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return RecipeStartComponent;
+    }();
+
+    RecipeStartComponent.ɵfac = function RecipeStartComponent_Factory(t) {
+      return new (t || RecipeStartComponent)();
+    };
+
+    RecipeStartComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: RecipeStartComponent,
+      selectors: [["app-recipe-start"]],
+      decls: 2,
+      vars: 0,
+      template: function RecipeStartComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h3");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Please select a Recipe!\uD83C\uDF55\uD83C\uDF54\uD83C\uDF57");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY2lwZXMvcmVjaXBlLXN0YXJ0L3JlY2lwZS1zdGFydC5jb21wb25lbnQuY3NzIn0= */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RecipeStartComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-recipe-start',
+          templateUrl: './recipe-start.component.html',
+          styleUrls: ['./recipe-start.component.css']
+        }]
+      }], function () {
+        return [];
       }, null);
     })();
     /***/
@@ -1193,81 +1482,39 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _recipe_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ../recipe.service */
-    "./src/app/recipe.service.ts");
-    /* harmony import */
-
-
-    var _recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ./recipe-list/recipe-list.component */
     "./src/app/recipes/recipe-list/recipe-list.component.ts");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-    /* harmony import */
-
-
-    var _recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./recipe-detail/recipe-detail.component */
-    "./src/app/recipes/recipe-detail/recipe-detail.component.ts");
-
-    function RecipesComponent_app_recipe_detail_4_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-recipe-detail", 5);
-      }
-
-      if (rf & 2) {
-        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("recipe", ctx_r0.selectedRecipe);
-      }
-    }
-
-    function RecipesComponent_ng_template_5_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Please select a Recipe!");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-    }
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var RecipesComponent = /*#__PURE__*/function () {
-      function RecipesComponent(recipeService) {
+      function RecipesComponent() {
         _classCallCheck(this, RecipesComponent);
-
-        this.recipeService = recipeService;
       }
 
       _createClass(RecipesComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this = this;
-
-          this.recipeService.recipeSelected.subscribe(function (recipe) {
-            _this.selectedRecipe = recipe;
-          });
-        }
+        value: function ngOnInit() {}
       }]);
 
       return RecipesComponent;
     }();
 
     RecipesComponent.ɵfac = function RecipesComponent_Factory(t) {
-      return new (t || RecipesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]));
+      return new (t || RecipesComponent)();
     };
 
     RecipesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: RecipesComponent,
       selectors: [["app-recipes"]],
-      decls: 7,
-      vars: 2,
-      consts: [[1, "row"], [1, "col-md-5"], [1, "col-md-7"], [3, "recipe", 4, "ngIf", "ngIfElse"], ["infoText", ""], [3, "recipe"]],
+      decls: 5,
+      vars: 0,
+      consts: [[1, "row"], [1, "col-md-5"], [1, "col-md-7"]],
       template: function RecipesComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -1280,24 +1527,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, RecipesComponent_app_recipe_detail_4_Template, 1, 1, "app-recipe-detail", 3);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, RecipesComponent_ng_template_5_Template, 2, 0, "ng-template", null, 4, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "router-outlet");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selectedRecipe)("ngIfElse", _r1);
         }
       },
-      directives: [_recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_2__["RecipeListComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _recipe_detail_recipe_detail_component__WEBPACK_IMPORTED_MODULE_4__["RecipeDetailComponent"]],
+      directives: [_recipe_list_recipe_list_component__WEBPACK_IMPORTED_MODULE_1__["RecipeListComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY2lwZXMvcmVjaXBlcy5jb21wb25lbnQuY3NzIn0= */"]
     });
     /*@__PURE__*/
@@ -1311,9 +1548,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           styleUrls: ['./recipes.component.css']
         }]
       }], function () {
-        return [{
-          type: _recipe_service__WEBPACK_IMPORTED_MODULE_1__["RecipeService"]
-        }];
+        return [];
       }, null);
     })();
     /***/
@@ -1447,7 +1682,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     !*** ./src/app/shoping-list/shoping-list.component.ts ***!
     \********************************************************/
 
-  /*! exports provided: ShopingListComponent */
+  /*! exports provided: ShoppingListComponent */
 
   /***/
   function srcAppShopingListShopingListComponentTs(module, __webpack_exports__, __webpack_require__) {
@@ -1457,8 +1692,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony export (binding) */
 
 
-    __webpack_require__.d(__webpack_exports__, "ShopingListComponent", function () {
-      return ShopingListComponent;
+    __webpack_require__.d(__webpack_exports__, "ShoppingListComponent", function () {
+      return ShoppingListComponent;
     });
     /* harmony import */
 
@@ -1485,7 +1720,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    function ShopingListComponent_a_5_Template(rf, ctx) {
+    function ShoppingListComponent_a_5_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 4);
 
@@ -1503,39 +1738,44 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
     }
 
-    var ShopingListComponent = /*#__PURE__*/function () {
-      function ShopingListComponent(slService) {
-        _classCallCheck(this, ShopingListComponent);
+    var ShoppingListComponent = /*#__PURE__*/function () {
+      function ShoppingListComponent(slService) {
+        _classCallCheck(this, ShoppingListComponent);
 
         this.slService = slService;
       }
 
-      _createClass(ShopingListComponent, [{
+      _createClass(ShoppingListComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this2 = this;
+          var _this3 = this;
 
           this.ingredients = this.slService.getIngredients();
-          this.slService.ingredientsChanged.subscribe(function (ingredients) {
-            _this2.ingredients = ingredients;
+          this.subscription = this.slService.ingredientsChanged.subscribe(function (ingredients) {
+            _this3.ingredients = ingredients;
           });
+        }
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this.subscription.unsubscribe();
         }
       }]);
 
-      return ShopingListComponent;
+      return ShoppingListComponent;
     }();
 
-    ShopingListComponent.ɵfac = function ShopingListComponent_Factory(t) {
-      return new (t || ShopingListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shopping_list_service__WEBPACK_IMPORTED_MODULE_1__["ShoppingListService"]));
+    ShoppingListComponent.ɵfac = function ShoppingListComponent_Factory(t) {
+      return new (t || ShoppingListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shopping_list_service__WEBPACK_IMPORTED_MODULE_1__["ShoppingListService"]));
     };
 
-    ShopingListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
-      type: ShopingListComponent,
-      selectors: [["app-shoping-list"]],
+    ShoppingListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: ShoppingListComponent,
+      selectors: [["app-shopping-list"]],
       decls: 6,
       vars: 1,
       consts: [[1, "row"], [1, "col-xs-10"], [1, "list-group"], ["class", "list-group-item", "style", "cursor: pointer;", 4, "ngFor", "ngForOf"], [1, "list-group-item", 2, "cursor", "pointer"]],
-      template: function ShopingListComponent_Template(rf, ctx) {
+      template: function ShoppingListComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
@@ -1547,7 +1787,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, ShopingListComponent_a_5_Template, 2, 2, "a", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, ShoppingListComponent_a_5_Template, 2, 2, "a", 3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1568,10 +1808,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*@__PURE__*/
 
     (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ShopingListComponent, [{
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ShoppingListComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
-          selector: 'app-shoping-list',
+          selector: 'app-shopping-list',
           templateUrl: './shoping-list.component.html',
           styleUrls: ['./shoping-list.component.css']
         }]
@@ -1814,7 +2054,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./shared/ingredient.model */
     "./src/app/shared/ingredient.model.ts");
 
@@ -1822,8 +2068,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function ShoppingListService() {
         _classCallCheck(this, ShoppingListService);
 
-        this.ingredientsChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.ingredients = [new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_1__["Ingredient"]('Apples', 5), new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_1__["Ingredient"]('Tomatoes', 10)];
+        this.ingredientsChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.ingredients = [new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__["Ingredient"]('Apples', 5), new _shared_ingredient_model__WEBPACK_IMPORTED_MODULE_2__["Ingredient"]('Tomatoes', 10)];
       }
 
       _createClass(ShoppingListService, [{
@@ -1835,7 +2081,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "addIngredient",
         value: function addIngredient(ingredient) {
           this.ingredients.push(ingredient);
-          this.ingredientsChanged.emit(this.ingredients.slice());
+          this.ingredientsChanged.next(this.ingredients.slice());
         }
       }, {
         key: "addIngredients",
@@ -1847,7 +2093,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           // }
           (_this$ingredients = this.ingredients).push.apply(_this$ingredients, _toConsumableArray(ingredients));
 
-          this.ingredientsChanged.emit(this.ingredients.slice());
+          this.ingredientsChanged.next(this.ingredients.slice());
         }
       }]);
 
@@ -1977,7 +2223,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Users\stu\Desktop\clones\Recipe-book-and-Shopping-list\src\main.ts */
+    /*! C:\Users\stu\Desktop\Recipe-book-and-Shopping-list\src\main.ts */
     "./src/main.ts");
     /***/
   }

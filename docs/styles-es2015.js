@@ -490,8 +490,8 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\stu\Desktop\clones\Recipe-book-and-Shopping-list\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\Users\stu\Desktop\clones\Recipe-book-and-Shopping-list\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\stu\Desktop\Recipe-book-and-Shopping-list\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\Users\stu\Desktop\Recipe-book-and-Shopping-list\src\styles.css */"./src/styles.css");
 
 
 /***/ })
