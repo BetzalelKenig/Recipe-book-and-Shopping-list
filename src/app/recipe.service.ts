@@ -10,6 +10,7 @@ import { ShoppingListService } from './shopping-list.service';
 })
 export class RecipeService {
   recipeSelected = new Subject<Recipe>();
+  recipesChanged = new Subject<Recipe[]>();
   private recipes: Recipe[] = [
     new Recipe('A Test Recipe', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [
       new Ingredient('Potato', 3),
@@ -33,5 +34,15 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  updateRecipe(index: number, newRecipe: Recipe) {
+    this.recipes[index] = newRecipe;
+    this.recipesChanged.next(this.recipes.slice());
   }
 }
