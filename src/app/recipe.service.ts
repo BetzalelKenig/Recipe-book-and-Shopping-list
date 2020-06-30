@@ -11,18 +11,24 @@ import { ShoppingListService } from './shopping-list.service';
 export class RecipeService {
   recipeSelected = new Subject<Recipe>();
   recipesChanged = new Subject<Recipe[]>();
-  private recipes: Recipe[] = [
-    new Recipe('A Test Recipe', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [
-      new Ingredient('Potato', 3),
-      new Ingredient('selery', 1)
-    ]),
-    new Recipe('A Test Recipe 2', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [
-      new Ingredient('Coren', 2),
-      new Ingredient('Chiken', 10)
-    ]),
-  ];
+  // private recipes: Recipe[] = [
+  //   new Recipe('A Test Recipe', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [
+  //     new Ingredient('Potato', 3),
+  //     new Ingredient('selery', 1)
+  //   ]),
+  //   new Recipe('A Test Recipe 2', 'This is Just a test', 'https://www.wholesomeyum.com/wp-content/uploads/2017/03/wholesomeyum_low-carb-bread-recipe-almond-flour-bread-paleo-gluten-free.jpg', [
+  //     new Ingredient('Coren', 2),
+  //     new Ingredient('Chiken', 10)
+  //   ]),
+  // ];
+  private recipes: Recipe[] = [];
 
   constructor(private slService: ShoppingListService) { }
+
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+  }
 
   getRecipes() {
     return this.recipes.slice();
