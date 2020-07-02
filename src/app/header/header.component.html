@@ -1,26 +1,55 @@
+<style>
+  nav {
+    background: lightgreen;
+    color: blue !important;
+  }
+</style>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Recipe Book</a>
+      <a class="navbar-brand" style="color: red;">Recipe Book</a>
     </div>
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
-        <li routerLinkActive="active">
-          <a routerLink="/auth">Authenticate</a>
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
+          <a routerLink="/recipes" style="color: blue;">Recipes</a>
+        </li>
+        <li routerLinkActive="active" *ngIf="!isAuthenticated">
+          <a routerLink="/auth" style="color: blue;">Authenticate</a>
         </li>
         <li routerLinkActive="active">
-          <a routerLink="/shopping-list">Shopping List</a>
+          <a routerLink="/shopping-list" style="color: blue;">Shopping List</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown" appDropdown>
-          <a style="cursor: pointer;" class="dropdown-toggle" role="button"
+        <li *ngIf="isAuthenticated">
+          <a style="color: blue; cursor: pointer;">Logout</a>
+        </li>
+        <li class="dropdown" appDropdown *ngIf="isAuthenticated">
+          <a
+            style="cursor: pointer;"
+            class="dropdown-toggle"
+            role="button"
+            style="color: blue;"
             >Manage <span class="caret"></span
           ></a>
-          <ul class="dropdown-menu">
-            <li><a style="cursor: pointer;" (click)="onSaveData()">Save Data</a></li>
-            <li><a style="cursor: pointer;" (click)="onFecthData()">Fetch Data</a></li>
+          <ul class="dropdown-menu" style="background-color: lightgreen;">
+            <li>
+              <a
+                style="cursor: pointer;"
+                (click)="onSaveData()"
+                style="color: red;"
+                >Save Data</a
+              >
+            </li>
+            <li>
+              <a
+                style="cursor: pointer;"
+                (click)="onFecthData()"
+                style="color: red;"
+                >Fetch Data</a
+              >
+            </li>
           </ul>
         </li>
       </ul>
