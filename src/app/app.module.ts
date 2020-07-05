@@ -6,9 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthInterceptorService } from './auth/auth.interceptor.service';
-import { ShoppingListModule } from './shoping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
-import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
@@ -19,8 +18,6 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ShoppingListModule,
-    AuthModule,
     SharedModule
   ],
   providers: [
